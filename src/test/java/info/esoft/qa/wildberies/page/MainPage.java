@@ -1,4 +1,4 @@
-package info.esoft.qa.wildberies.helpers;
+package info.esoft.qa.wildberies.page;
 
 
 import com.codeborne.selenide.Selenide;
@@ -7,7 +7,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.visible;
 import static info.esoft.qa.wildberies.constants.MainConstants.*;
 
-public class MainPageObject {
+public class MainPage {
 
 
     public void scrollBannerRight() {
@@ -21,7 +21,7 @@ public class MainPageObject {
     public void showMore() throws InterruptedException {
 
         //вариант 1
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             doScroll(1500);
             Thread.sleep(1500);
         }
@@ -44,7 +44,7 @@ public class MainPageObject {
     }
 
     public void pressUpButton() throws InterruptedException {
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             doScroll(2500);
             Thread.sleep(1500);
         }
@@ -55,9 +55,9 @@ public class MainPageObject {
         return element.shouldBe(visible).isDisplayed();
     }
 
-    public IssuingAddressPageObject clickAddressGeoCite() {
+    public IssuingAddressPage clickAddressGeoCite() {
         buttonGeolocation.shouldBe(visible).click();
-        return new IssuingAddressPageObject();
+        return new IssuingAddressPage();
     }
 
 

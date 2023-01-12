@@ -1,4 +1,4 @@
-package info.esoft.qa.wildberies.helpers;
+package info.esoft.qa.wildberies.page;
 
 import org.junit.After;
 import org.junit.Before;
