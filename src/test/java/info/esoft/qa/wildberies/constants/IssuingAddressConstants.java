@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public interface IssuingAddressConstants {
 
-    SelenideElement ButtonCiteGeolocation = $x("//body[1]/div[1]/div[1]/div[2]/div[1]/ymaps[1]/ymaps[1]/ymaps[1]/ymaps[5]/ymaps[3]/ymaps[1]/div[1]/img[1]");
-    SelenideElement LocationSelectionButton = $x("//button[contains(text(),'Выбрать')]");
+    SelenideElement buttonCiteGeolocation = $x("//*[@id=\"pooList\"]/div[1]/div");
+    SelenideElement locationSelectionButton = $x("//button[contains(text(),'Выбрать')]");
 
 }

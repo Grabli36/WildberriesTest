@@ -1,11 +1,13 @@
 package info.esoft.qa.wildberies.helpers;
 
-import static info.esoft.qa.wildberies.constants.IssuingAddressConstants.ButtonCiteGeolocation;
-import static info.esoft.qa.wildberies.constants.IssuingAddressConstants.LocationSelectionButton;
+import static com.codeborne.selenide.Condition.visible;
+import static info.esoft.qa.wildberies.constants.IssuingAddressConstants.buttonCiteGeolocation;
+import static info.esoft.qa.wildberies.constants.IssuingAddressConstants.locationSelectionButton;
 
 public class IssuingAddressPageObject {
-    public void CheckShippingAddressFromPickupPoint() {
-        ButtonCiteGeolocation.click();
-        LocationSelectionButton.click();
+    public void selectShippingAddressFromPickupPoint() {
+        buttonCiteGeolocation.shouldBe(visible).click();
+        locationSelectionButton.shouldBe(visible).click();
+
     }
 }

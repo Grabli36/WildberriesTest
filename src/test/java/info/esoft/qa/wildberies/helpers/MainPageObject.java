@@ -10,52 +10,55 @@ import static info.esoft.qa.wildberies.constants.MainConstants.*;
 public class MainPageObject {
 
 
-    public  void ScrollBannerRight() {
-        RightBannerButton.click();
+    public void scrollBannerRight() {
+        rightBannerButton.click();
     }
 
-    public  void ScrollBannerLeft() {
-        LeftBannerButton.click();
+    public void scrollBannerLeft() {
+        leftBannerButton.click();
     }
 
-    public  void ShowMore() throws InterruptedException {
+    public void showMore() throws InterruptedException {
 
         //вариант 1
         for (int i = 0; i < 2; i++) {
             doScroll(1500);
             Thread.sleep(1500);
         }
-        ShowMoreButton.click();
+        showMoreButton.click();
 
         //Хотел попробовать без цикла сделать
         /*actions().moveByOffset( 0, 500);*/
     }
 
-    public  void doScroll(int pix) {
+    public void doScroll(int pix) {
         Selenide.executeJavaScript("window.scrollBy(0," + pix + ")", "");
     }
 
-    public  void ClickNavbar()  {
-        Navbar.shouldBe(visible).click();
+    public void clickNavbar() {
+        navbar.shouldBe(visible).click();
     }
 
-    public void  ClickBanner(){
-        ButtonBanner.click();
+    public void clickBanner() {
+        buttonBanner.click();
     }
 
-    public void PressUpButton() throws InterruptedException {
+    public void pressUpButton() throws InterruptedException {
         for (int i = 0; i < 2; i++) {
             doScroll(2500);
             Thread.sleep(1500);
         }
-        Anchor.click();
+        anchor.click();
     }
 
-    public boolean ElementVisibility(SelenideElement element){
+    public boolean checkElementVisibility(SelenideElement element) {
         return element.shouldBe(visible).isDisplayed();
     }
 
-
+    public IssuingAddressPageObject clickAddressGeoCite() {
+        buttonGeolocation.shouldBe(visible).click();
+        return new IssuingAddressPageObject();
+    }
 
 
 }

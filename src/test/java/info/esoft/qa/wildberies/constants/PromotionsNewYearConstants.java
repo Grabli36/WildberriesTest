@@ -6,5 +6,5 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public interface PromotionsNewYearConstants {
 
-    SelenideElement PromoTitle = $x("//h1[@class='promo-category-page__title']");
+    SelenideElement promoTitle = $x("//h1[@class='promo-category-page__title']");
 }
