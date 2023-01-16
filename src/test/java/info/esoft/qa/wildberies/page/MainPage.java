@@ -55,9 +55,9 @@ public class MainPage {
         return element.shouldBe(visible).isDisplayed();
     }
 
-    public IssuingAddressPage clickAddressGeoCite() {
+    public MapPage clickAddressGeoCite() {
         buttonGeolocation.shouldBe(visible).click();
-        return new IssuingAddressPage();
+        return new MapPage();
     }
 
 
